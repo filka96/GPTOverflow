@@ -21,6 +21,7 @@ tasks.withType<Jar> {
     manifest {
         attributes["Main-Class"] = "ai.gptoverflow.api.MainKt"
     }
+    archiveFileName.set("api.jar")
     from(configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) })
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }

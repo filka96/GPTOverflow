@@ -9,3 +9,7 @@ repositories {
 dependencies {
     api(project(":gpt:app"))
 }
+
+tasks.withType<Jar> {
+    archiveFileName.set("gpt-api.jar")
+}
